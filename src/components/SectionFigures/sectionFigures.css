@@ -1,0 +1,78 @@
+.svg-container {
+            width: 100%;
+            line-height: 0; 
+            position: relative;
+}
+
+
+.svg-container svg {
+    width: 100%;
+    height: auto; 
+    display: block;
+}
+
+.rect-container {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  /* margin: -2px 0; */
+  transform: translateZ(0);
+}
+
+.triangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 40px;
+}
+
+.triangle-solid {
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  --webkit-clip-path:polygon(0 0, 100% 0, 0 100%);
+}
+
+.triangle-blur-wrapper {
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  --webkit-clip-path:polygon(100% 0, 100% 100%, 0 100%);
+  overflow: hidden;
+}
+
+.blur {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.blur-content {
+  width: 100%;
+  height: 100%;
+  /* height: 40px;
+  margin-bottom: -4px;
+  max-height: 40px; */
+  transform: scale(1.1);
+}
+
+
+.place {
+  width: 100%;
+  height: 40px;
+  background-color:rgba(165, 233, 221, 0.8) ;
+  position: relative;
+  margin: 0;
+  transform: translateZ(0);
+  /* clip-path: polygon(0 0, 100% 0, 0 100%);
+  --webkit-clip-path:polygon(0 0, 100% 0, 0 100%); */
+}
+
+.place-shape {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  right: 0;
+  bottom: -2px;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  --webkit-clip-path:polygon(100% 0, 100% 100%, 0 100%);
+  background-color: black;
+}

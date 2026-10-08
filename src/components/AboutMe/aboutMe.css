@@ -1,0 +1,222 @@
+.aboutMe, .whole-invisible-section {
+    margin-top: -1px;
+    display: flex;
+    /* align-content: center; */
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: transparent;
+}
+
+.aboutMe {
+    background-color: var(--section-bg-light-color-1);
+    backdrop-filter: blur(8px);
+}
+
+.alt-aboutMe {
+    background-color: var(--section-bg-dark-color-1);
+}
+
+.container, .card-shape {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.card{
+    width: 60%;
+    /* min-width: 300px; */
+    /* margin: 0 auto 0 auto; */
+}
+
+
+.shaping {
+    width: calc(60% + 60px);
+    /* min-width: 300px; */
+    /* padding: 30px; */
+    display: flex;
+    gap: 20px;
+    /* background-color: white; */
+}
+
+.shape-title {
+    flex: 0 0 auto;
+    font-size: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 20px 30px;
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 28px;
+    color: var(--main-color-2);
+}
+
+.shape::before {
+    content: "";
+    width: 24px;
+    aspect-ratio: 1;
+    background-color: white;
+    position: absolute;
+    right: 100%;
+    bottom: 0;
+    background: radial-gradient(circle 24px at top left, transparent 98%, white);
+}
+
+.shape {
+    position: relative;
+    flex: 1;
+    background-color: white;
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
+    padding: 40px;
+    background: linear-gradient(120deg, white, #d9f0ff); 
+}
+/* CCFBFA */
+
+.card {
+    /* Card modo oscuro */
+    /* background: linear-gradient(120deg, black, #222831);  */
+    /* Card modo oscuro */
+    background: linear-gradient(120deg, white, #d9f0ff); 
+    color: black;
+    padding: 30px;
+    border-radius: 28px;
+    border-top-right-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    /* overflow: hidden; */
+}
+
+/* .card::after {
+    content: "";
+    width: 20%;
+    aspect-ratio: 4/3;
+    position: absolute;
+    color: white;
+    border-radius: 50%;
+    filter: blur(20px);
+    top: 0;
+    left: 0;
+    z-index: 10;
+} */
+
+
+
+.aside {
+    position: absolute;
+    width: 10%;
+    top: 0;
+    left: 1px;
+    /* background-color: black; */
+    width: 20%;
+}
+
+.card-title {
+    /* content: "Sobre mi"; */
+    width: 20%;
+    min-width: 160px;
+    height: auto;
+    padding: 5px;
+    color: black;
+    background-color: transparent;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 28px;
+    
+    /* mix-blend-mode: screen; */
+    /* mix-blend-mode: difference */
+}
+
+.title {
+    width: 20%;
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    display: flex;
+    place-items: center center;
+}
+
+.title h3 {
+    font-size: 70px;
+    transform: rotate(270deg);
+}
+
+.reveal {
+    animation: elementReveal both;
+    animation-timeline: view(10% 5%);
+}
+
+@keyframes elementReveal {
+    from {
+        opacity: 0;
+        scale: .90;
+        translate: 0 4rem;
+    } to {
+        opacity: 1;
+        scale: 1;
+        translate: 0 0;
+    }
+}
+
+/* Media queries */
+@media screen and (max-width: 1000px) {
+    .card {
+        gap: 50px;
+    }
+
+    .profile {
+        height: initial;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .title {
+        width: 80%;
+        height: 50px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .title h3 {
+        font-size: 40px;
+        transform: rotate(0deg);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    /* .shaping {
+        width: 100%;
+    } */
+
+    .container {
+        /* width: 100%; */
+        flex-direction: column;
+        
+    }
+
+    .card-shape {
+        width: 100%;
+    }
+
+    .shaping {
+        width: 100%;
+    }
+
+    .card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    /* .card-shape {
+        width: calc(100% + 40px);
+    } */
+}

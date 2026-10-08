@@ -1,0 +1,290 @@
+/* Hero */
+
+.text {
+    font-size: var(--font-content);
+    margin-bottom: 5px;
+}
+
+/* Revisar este estilo de aca **************************************************************************************** */
+.section {
+    padding: var(--padding-section);
+    /* padding-bottom: 0px; */
+    width: calc(100% - calc(var(--padding-section) * 2));
+}
+
+/* .hero {
+    min-height: 400px;
+    padding: var(--padding-section);
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-title {
+    font-size: 50px;
+    color: aqua;
+    margin-bottom: 40px;
+    align-self: start;
+}
+
+.hero-subtitle {
+    font-size: 120px;
+    color: greenyellow;
+    align-self: center;
+}
+
+.welcome {
+    color: white;
+    font-size: var(--font-content);
+    align-self: center;
+    margin: 30px 0 30px 0;
+} */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-head {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 60px;
+    align-content: center;
+}
+
+.titles {
+    /* width: 100%; */
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-title {
+    font-size: clamp(15px, 5vw + 1rem, 8rem);
+    background: linear-gradient(to right, var(--main-color-1), var(--main-color-2), var(--main-color-3));
+  
+  /* Clip the background to the text contours */
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  /* Make the original text color transparent to reveal the gradient */
+  -webkit-text-fill-color: transparent;
+  /* text-fill-color: transparent */
+}
+
+.hero-subtitle {
+    font-size: clamp(10px, 5vw + 1rem, 7rem);
+    margin-bottom: 10px;
+    color: var(--main-color-4);
+    background: linear-gradient(to right, var(--main-color-4), var(--main-color-5) 10%, var(--main-color-6));
+  
+  /* Clip the background to the text contours */
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  /* Make the original text color transparent to reveal the gradient */
+  -webkit-text-fill-color: transparent;
+  /* text-fill-color: transparent */
+}
+
+.dash {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(95% - calc(var(--padding-section) * 2));
+    color: white;
+    background: linear-gradient(120deg, black, #202940);
+    padding: 15px 30px;
+    border-radius: 28px;
+    font-size: 20px;
+    margin-bottom: 140px;
+}
+
+.alt-dash {
+    background: linear-gradient(120deg, #09122C, #202940);
+}
+
+.btn-section {
+    display: flex;
+    gap: 20px;
+    align-self: center;
+}
+
+.btn {
+    padding: 10px 25px;
+    font-size: clamp(20px, 5vw, 1.2rem);
+    border-radius: 28px;
+    position: relative;
+    /* background-color: transparent;
+    color: contrast-color(black); */
+    border: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn1 {
+    /* border: 3px solid aqua; */
+    background-image: linear-gradient(90deg, var(--main-color-1), var(--main-color-2), var(--main-color-3));
+    color: white;
+}
+
+.btn1:hover {
+    background-image: linear-gradient(90deg, var(--main-color-1) 40%, var(--main-color-2), var(--main-color-3));
+}
+
+.btn2 {
+    /* border: 3px solid greenyellow; */
+    background-image: linear-gradient(90deg, var(--main-color-4), var(--main-color-5), var(--main-color-6));
+    color: white;
+}
+
+.btn2:hover {
+    background-image: linear-gradient(90deg, var(--main-color-4) 40%, var(--main-color-5), var(--main-color-6));
+}
+
+.profile {
+    width: 25%;
+    min-width: 300px;
+    align-self: center;
+    position: relative;
+    position: relative;
+    /* z-index: 5; */
+}
+
+.profile > img {
+    width: 100%;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    margin-top: 4px;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+/* , .btn1::after, .btn1::before, .btn2::after, .btn2::before */
+
+.profile::after, .profile::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    /* padding: 4px 6px 0px 6px; */
+    padding: 5px;
+    animation: 3s spin linear infinite;
+}
+
+.profile::after, .profile::before {
+    background-image: conic-gradient(from var(--angle), var(--main-color-1), var(--main-color-2), var(--main-color-3), var(--main-color-4), var(--main-color-5), var(--main-color-6));
+    height: 98.1%;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+/* .btn1::after, .btn1::before, .btn2::after, .btn2::before {
+    height: 100%;
+    border-radius: 28px;
+}
+
+.btn1::after, .btn1::before {
+    background-image: conic-gradient(from var(--angle), blue, aqua, blue);
+    height: 100%;
+}
+
+.btn2::after, .btn2::before {
+    background-image: conic-gradient(from var(--angle), green, yellowgreen, green);
+    height: 100%;
+} */
+
+@keyframes spin {
+    from {
+        --angle:0deg;
+    }
+    to {
+        --angle:360deg;
+    }
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+    /* .hero-title {
+        font-size: 5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 3.5rem;
+    } */
+     .dash {
+        margin-bottom: initial;
+     }
+}
+
+@media screen and (max-width: 450px) {
+   :root {
+    --padding-section: 30px;
+    
+    /* --font-content: 20px; */ 
+    /* --padding-content: 20px; */
+}
+
+    .section {
+        padding-bottom: var(--padding-up-down-mobile);
+        padding-top: var(--padding-up-down-mobile);
+    }
+
+    /* Hero */
+    .hero {
+        align-items: flex-start;
+    }
+
+    .hero-head {
+        flex-direction: column;
+    }
+
+    .hero-title {
+        /* font-size: 4rem; */
+    }
+
+    .hero-subtitle {
+        /* font-size: 2.5rem; */
+    }
+
+    .dash {
+        width: calc(100% - calc(var(--padding-section) * 2));
+        background: transparent;
+        display: flex;
+        justify-content: center;
+    }
+
+    .legend {
+        display: none;
+    }
+
+    .btn-section {
+        flex-direction: column;
+    }
+
+    .btn {
+        padding: 20px 35px;
+    }
+
+    .btn2 {
+        margin-top: 20px;
+    }
+
+    .profile {
+        width: 100%;
+        margin-top: 40px;
+    }
+}

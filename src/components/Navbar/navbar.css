@@ -1,0 +1,82 @@
+/* Menu */
+
+.sidebar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    z-index: 20;
+    gap: 10px;
+}
+
+.toggle {
+    cursor: pointer;
+    position: relative;
+    transition: opacity 0.5s ease;
+}
+
+.toggle, .menu {
+    background-color: #1C2541;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    transition: 0.1s ease all;
+}
+
+.menu-item > a > i, .toggle {
+    font-size: 30px;
+    /* color: greenyellow; */
+    color: white;
+}
+
+.menu > li > a {
+    position: relative;
+    text-decoration: none;
+    /* color: greenyellow; */
+}
+
+.menu-info {
+    position: absolute;
+    font-size: 20px;
+    width: auto;
+    right: 60px;
+    top: 10%;
+    background-color: #1C2541;
+    padding: 10px 15px;
+    border-radius: 4px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    white-space: nowrap;
+}
+
+.toggle .menu-info {
+    right: 75px;
+}
+
+.menu-item a:hover .menu-info, .toggle:hover .menu-info {
+    opacity: 1;
+    display: initial;
+}
+
+.hidden-menu {
+    cursor: none;
+    transform: translateX(100px);
+}
+
+@media screen and (max-width: 450px) {
+   .menu {
+    gap: 30px;
+   }
+}
