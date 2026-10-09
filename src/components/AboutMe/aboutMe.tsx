@@ -10,7 +10,7 @@ const AboutMe = () => {
         <>
             <SectionShape svg1={{bg:"rgba(0, 0, 0, 0.0)", blur:false}} svg2={{bg:mode.theme==="light" ? "var(--section-bg-light-color-1)" : "var(--section-bg-dark-color-1)", blur:true}} />
             <section className={mode.theme ==="light" ? 'section aboutMe' : 'section aboutMe alt-aboutMe'}>
-                <div className="whole-invisible-section">
+                <div className="whole-invisible-section reveal">
                     <div style={{width:"100%"}}>
                         <div className="card-shape">
                             <div className="shaping">
