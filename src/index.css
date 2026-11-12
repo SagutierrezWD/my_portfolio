@@ -58,8 +58,8 @@ body {
     --main-color-4: #FF3F7F;
     --main-color-5: #91008D;
     --main-color-6: #30AFFF;
-    --section-bg-light-color-1:rgba(187, 222, 251, 0.8);
-    --section-bg-light-color-2:rgba(111, 0, 255, 0.8);
-    --section-bg-dark-color-1:rgba(47, 47, 228, 0.8);
-    --section-bg-dark-color-2:rgba(71, 19, 150, 0.8);
+    --section-bg-light-color-1:rgba(187, 222, 251, 1);
+    --section-bg-light-color-2:rgba(111, 0, 255, 1);
+    --section-bg-dark-color-1:rgba(47, 47, 228, 1);
+    --section-bg-dark-color-2:rgba(71, 19, 150, 1);
 }

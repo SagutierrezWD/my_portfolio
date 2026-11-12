@@ -1,6 +1,6 @@
 .skills, .skills-copy {
     /* width: 100%; */
-    background-color: var(--section-bg-light-color-2);
+    /* background-color: var(--section-bg-light-color-2); */
     display: flex;
     flex-direction: column;
     justify-content: center;

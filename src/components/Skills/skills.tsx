@@ -9,7 +9,7 @@ const Skills = () => {
     return (
         <>
             <SectionShape svg1={{bg:mode.theme==="light" ? "var(--section-bg-light-color-1)" : "var(--section-bg-dark-color-1)", blur:false}} svg2={{bg:mode.theme==="light" ? "var(--section-bg-light-color-2)" : "var(--section-bg-dark-color-2)", blur:false}} />
-            <section id="skills" className="section skills">
+            <section id="skills" className="section skills" style={{backgroundColor:mode.theme==="light" ? "var(--section-bg-light-color-2)" : "var(--section-bg-dark-color-2)"}}>
                 <div className='skills-copy reveal2'>
                     <div className="skills-card-bottom">
                         <div className="skill-shape" />
