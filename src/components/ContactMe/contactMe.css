@@ -15,7 +15,7 @@
 
 .cmCard {
     width: 90%;
-    min-height: 60vh;
+    min-height: 40vh;
     background: linear-gradient(120deg, white, #d9f0ff); 
     display: flex;
     justify-content: space-between;
@@ -26,11 +26,28 @@
 }
 
 .formulary {
-    width: 45%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 30px;
+}
+
+.input-group {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /* gap: 10px; */
+}
+
+.input-element {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.input-element input {
+    margin-top: 30px;
 }
 
 .formulary input, .formulary textarea {
@@ -47,6 +64,7 @@
 
 .desc {
     flex: 1;
+    max-height: 400px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -146,5 +164,16 @@
 
     .desc {
         padding: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .input-group {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .input-element {
+        width: 100%;
     }
 }

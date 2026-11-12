@@ -23,11 +23,17 @@ const ContactMe = () => {
                 <div className="contactMe-copy reveal2">
                     <div className="cmCard text">
                         <form action="" className="formulary" onSubmit={(e) => sendEmail(e)}>
-                            <label htmlFor="nombre">Nombre</label>
-                            <input onChange={(e) => setName(e.target.value)} value={name} type="text" name="nombre" id="nombre" placeholder="Mi nombre es..." maxLength={20} required/>
+                            <div className="input-group">
+                                <div className="input-element">
+                                    <label htmlFor="nombre">Nombre</label>
+                                    <input onChange={(e) => setName(e.target.value)} value={name} type="text" name="nombre" id="nombre" placeholder="Mi nombre es..." maxLength={30} required/>
+                                </div>
 
-                            <label htmlFor="email">Email</label>
-                            <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" name="email" id="email" placeholder="Mi correo es..." maxLength={20} required/>
+                                <div className="input-element">
+                                    <label htmlFor="email">Email</label>
+                                    <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" name="email" id="email" placeholder="Mi correo es..." maxLength={40} required/>
+                                </div>
+                            </div>
 
                             <label htmlFor="mensaje">Mensaje</label>
                             <textarea onChange={(e) => setMessage(e.target.value)} value={message} name="mensaje" id="mensaje" placeholder="Sergio, te quiero comentar que..." maxLength={400} aria-controls="none" required></textarea>
@@ -43,7 +49,7 @@ const ContactMe = () => {
                         </div>
                     </div>
                     <div className="cmCard-bottom">
-                        <h3 className="text">Contacta me</h3>
+                        <h3 className="text">Contacto</h3>
                         <div className="cmCard-shape"></div>
                     </div>
                 </div>
