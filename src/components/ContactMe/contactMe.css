@@ -58,6 +58,14 @@
     font-size: 18px;
 }
 
+.formulary button {
+    max-width: 100px;
+    padding: 10px 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
 .formulary textarea {
     resize: none;
 }

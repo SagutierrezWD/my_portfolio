@@ -11,10 +11,10 @@ const ContactMe = () => {
     const [email, setEmail] = useState("")
     const [message, setMessage] = useState("")
 
-    const sendEmail = (e:React.SubmitEvent<HTMLFormElement>) => {
-        e.preventDefault()
-        alert("Nombre: "+name+"Email: "+email)
-    }
+    // const sendEmail = (e:React.SubmitEvent<HTMLFormElement>) => {
+    //     e.preventDefault()
+    //     alert("Nombre: "+name+"Email: "+email)
+    // }
 
     return (
         <>
@@ -22,11 +22,13 @@ const ContactMe = () => {
             <section id="contactme" className="section contactMe" style={{backgroundColor:mode.theme==="light" ? "var(--section-bg-light-color-2)" : "var(--section-bg-dark-color-2)"}}>
                 <div className="contactMe-copy reveal2">
                     <div className="cmCard text">
-                        <form action="" className="formulary" onSubmit={(e) => sendEmail(e)}>
+                        <form action="https://formsubmit.co/5b2850e523afdc533fe0aa4184a19fc4 " method="POST" className="formulary">
                             <div className="input-group">
+                                <input type="hidden" name="_captcha" value="false"></input>
+
                                 <div className="input-element">
-                                    <label htmlFor="nombre">Nombre</label>
-                                    <input onChange={(e) => setName(e.target.value)} value={name} type="text" name="nombre" id="nombre" placeholder="Mi nombre es..." maxLength={30} required/>
+                                    <label htmlFor="name">Nombre</label>
+                                    <input onChange={(e) => setName(e.target.value)} value={name} type="text" name="name" id="name" placeholder="Mi nombre es..." maxLength={30} required/>
                                 </div>
 
                                 <div className="input-element">
@@ -35,8 +37,8 @@ const ContactMe = () => {
                                 </div>
                             </div>
 
-                            <label htmlFor="mensaje">Mensaje</label>
-                            <textarea onChange={(e) => setMessage(e.target.value)} value={message} name="mensaje" id="mensaje" placeholder="Sergio, te quiero comentar que..." maxLength={400} aria-controls="none" required></textarea>
+                            <label htmlFor="message">Mensaje</label>
+                            <textarea onChange={(e) => setMessage(e.target.value)} value={message} name="message" id="message" placeholder="Sergio, te quiero comentar que..." maxLength={400} aria-controls="none" required></textarea>
 
                             <button className="btn btn1">Enviar</button>
                         </form>
