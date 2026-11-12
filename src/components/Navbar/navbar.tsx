@@ -37,8 +37,7 @@ const Navbar: React.FC<MenuItemProps> = ({items}: MenuItemProps) => {
             </ul>
 
             <span className={menu.open === true ? "toggle" : "toggle hidden-menu"} onClick={() => mode.toggleTheme()}>
-                <i className='bx bx-moon'></i>
-                {/* <i className='bx bx-sun'></i> */}
+                {mode.theme==="light" ? <i className='bx bx-moon'></i> : <i className='bx bx-sun'></i>}
 
                 <span className='menu-info'>{mode.theme == "light" ? "Modo Oscuro" : "Modo Claro"}</span>
                 {/* <span className='menu-info'>Modo Claro</span> */}
