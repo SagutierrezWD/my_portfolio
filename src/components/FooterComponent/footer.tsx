@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { NavLink } from "react-router";
 import { useThemeContext } from '../../context/themeContext'
 import SectionShape from '../SectionFigures/sectionFigures'
 import './footer.css'
