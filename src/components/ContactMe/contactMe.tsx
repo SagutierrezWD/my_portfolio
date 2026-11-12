@@ -27,7 +27,7 @@ const ContactMe = () => {
                             <input onChange={(e) => setName(e.target.value)} value={name} type="text" name="nombre" id="nombre" placeholder="Mi nombre es..." maxLength={20} required/>
 
                             <label htmlFor="email">Email</label>
-                            <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" name="nombre" id="nombre" placeholder="Mi correo es..." maxLength={20} required/>
+                            <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" name="email" id="email" placeholder="Mi correo es..." maxLength={20} required/>
 
                             <label htmlFor="mensaje">Mensaje</label>
                             <textarea onChange={(e) => setMessage(e.target.value)} value={message} name="mensaje" id="mensaje" placeholder="Sergio, te quiero comentar que..." maxLength={400} aria-controls="none" required></textarea>

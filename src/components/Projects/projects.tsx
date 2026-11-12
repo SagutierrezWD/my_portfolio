@@ -23,17 +23,17 @@ const Projects = () => {
                             </div>
 
                             <div className="p-actions">
-                                <button className="btn btn1 small-btn main-btn">
+                                <a href="https://github.com/SagutierrezWD/dictionary" target="_blank" role="button" className="btn btn1 small-btn main-btn">
                                     <i className='bx bxl-github'></i>
-                                </button>
+                                </a>
                                         
-                                <button className="btn btn1 small-btn main-btn">
+                                <a href="https://dictionary-gamma-six.vercel.app" target="_blank" role="button" className="btn btn1 small-btn main-btn">
                                     <i className='bx bx-link-external'></i>
-                                </button>
+                                </a>
 
-                                <button className="btn btn1 small-btn modal-btn">
+                                <a href="" target="_blank" role="button" className="btn btn1 small-btn modal-btn">
                                     <i className='bx bx-link-external'></i>
-                                </button>
+                                </a>
 
                                 {/* <ul className="tech-list">
                                     <h4>Tecnologias usadas: </h4>
@@ -54,17 +54,17 @@ const Projects = () => {
                             </div>
 
                             <div className="p-actions">
-                                <button className="btn btn1 small-btn main-btn">
+                                <a href="https://github.com/SagutierrezWD/alurageek_ecommerce" target="_blank" role="button" className="btn btn1 small-btn main-btn">
                                     <i className='bx bxl-github'></i>
-                                </button>
+                                </a>
 
-                                <button className="btn btn1 small-btn main-btn">
+                                <a href="https://sagutierrezwd.github.io/alurageek_ecommerce/" target="_blank" role="button" className="btn btn1 small-btn main-btn">
                                     <i className='bx bx-link-external'></i>
-                                </button>
+                                </a>
                                 
-                                <button className="btn btn1 small-btn modal-btn">
+                                <a href="" target="_blank" role="button" className="btn btn1 small-btn modal-btn">
                                     <i className='bx bx-link-external'></i>
-                                </button>
+                                </a>
                             </div>
                         </div>
 
@@ -77,17 +77,17 @@ const Projects = () => {
                             </div>
 
                             <div className="p-actions">
-                                <button className="btn btn1 small-btn main-btn">
+                                <a href="https://github.com/SagutierrezWD/aluraflix" target="_blank" role="button" className="btn btn1 small-btn main-btn">
                                     <i className='bx bxl-github'></i>
-                                </button>
+                                </a>
                                         
-                                <button className="btn btn1 small-btn main-btn">
+                                <a href="https://aluraflix-tan.vercel.app" target="_blank" role="button" className="btn btn1 small-btn main-btn">
                                     <i className='bx bx-link-external'></i>
-                                </button>
+                                </a>
 
-                                <button className="btn btn1 small-btn modal-btn">
+                                <a href="" target="_blank" role="button" className="btn btn1 small-btn modal-btn">
                                     <i className='bx bx-link-external'></i>
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
