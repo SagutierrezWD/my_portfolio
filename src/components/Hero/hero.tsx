@@ -1,10 +1,17 @@
 import './hero.css'
 import image from "../../assets/me.jpg"
 import { useThemeContext } from '../../context/themeContext.tsx'
-import { useRef } from 'react'
 
 const Hero = () => {
     const mode = useThemeContext()
+
+    function navigateTo(id:string) {
+        const element = document.getElementById(id);
+
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+    }
     
     return (
         <>
@@ -30,11 +37,11 @@ const Hero = () => {
                     </p>
 
                     <div className="btn-section">
-                        <button className="btn btn1">
+                        <button onClick={() => navigateTo("projects")} className="btn btn1">
                             Proyectos
                         </button>
 
-                        <button className="btn btn2">
+                        <button onClick={() => navigateTo("skills")} className="btn btn2">
                             Habilidades
                         </button>
                     </div>
