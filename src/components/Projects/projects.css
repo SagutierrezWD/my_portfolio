@@ -132,9 +132,9 @@
     padding: 5px 10px;
 }
 
-.modal-btn {
+/* .modal-btn {
     display: none;
-}
+} */
 
 @media screen and (max-width: 768px) {
     .project-shape {
@@ -167,7 +167,7 @@
         display: none;
     }
 
-    .modal-btn {
+    /* .modal-btn {
         display: initial;
-    }
+    } */
 }

@@ -8,6 +8,7 @@ import Projects from './components/Projects/projects'
 import { useThemeContext } from './context/themeContext'
 import Skills from './components/Skills/skills'
 import ContactMe from './components/ContactMe/contactMe'
+import Modal from './components/Modal/modal'
 
 const menuItem = [
   {icon:"bx bx-home", text:"Inicio", to:"home"},
@@ -27,6 +28,7 @@ function App() {
     <>
         <AltBackground hide={status} />
         <Navbar items={menuItem}/>
+        <Modal />
         <main>
           <Hero />
           <AboutMe />

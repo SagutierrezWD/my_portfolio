@@ -23,4 +23,7 @@ interface ItemProps {
     to: string;
 }
 
-export type { SectionProps, AltBackgroundProps, MenuItemProps }
+
+type ProjectsListed = "p1" | "p2" | "p3";
+
+export type { SectionProps, AltBackgroundProps, MenuItemProps, ProjectsListed }

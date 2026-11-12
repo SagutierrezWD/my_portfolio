@@ -4,12 +4,15 @@ import './index.css'
 import App from './App.tsx'
 import { ThemeProvider } from './context/themeContext.tsx';
 import { MenuStatusProvider } from './context/menuContext.tsx';
+import { ModalProvider } from './context/modalContext.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider>
       <MenuStatusProvider>
-        <App />
+        <ModalProvider>
+          <App />
+        </ModalProvider>
       </MenuStatusProvider>
     </ThemeProvider>
   </StrictMode>,

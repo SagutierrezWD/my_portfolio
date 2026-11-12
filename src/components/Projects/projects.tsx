@@ -4,9 +4,16 @@ import { useThemeContext } from "../../context/themeContext"
 import p1 from "../../assets/p1.jpg"
 import p2 from "../../assets/p2.jpg"
 import p3 from "../../assets/p3.jpg"
+import { useModalContext } from "../../context/modalContext"
+import type { ProjectsListed } from "../../types"
 
 const Projects = () => {
     const mode = useThemeContext()
+    const modal = useModalContext()
+
+    const toggle = (id:ProjectsListed) => {
+        modal.toggleModal(id)
+    }
 
     return (
         <>
@@ -31,9 +38,9 @@ const Projects = () => {
                                     <i className='bx bx-link-external'></i>
                                 </a>
 
-                                <a href="" target="_blank" role="button" className="btn btn1 small-btn modal-btn">
+                                <button onClick={() => toggle("p1")} className="btn btn1 small-btn modal-btn">
                                     <i className='bx bx-link-external'></i>
-                                </a>
+                                </button>
 
                                 {/* <ul className="tech-list">
                                     <h4>Tecnologias usadas: </h4>
@@ -49,8 +56,8 @@ const Projects = () => {
                             <img className="p-img" src={p2} alt="Imagen del proyecto 2" />
 
                             <div className="p-desc">
-                                <div className="h4">Alurageek Ecommerce</div>
-                                <p>Alurageek es uno de los retos planteados en el programa ONE y consiste en una plataforma donde puedes comprar diferentes tipos de equipos como un usuario y tambien administrar los productos como un administrador.</p>
+                                <div className="h4">Aluraflix</div>
+                                <p>Aluraflix es otro de los retos propuestos en el programa ONE y consiste en una plataforma donde puedes ver y agregar videos de diferentes categorias.</p>
                             </div>
 
                             <div className="p-actions">
@@ -62,9 +69,9 @@ const Projects = () => {
                                     <i className='bx bx-link-external'></i>
                                 </a>
                                 
-                                <a href="" target="_blank" role="button" className="btn btn1 small-btn modal-btn">
+                                <button  onClick={() => toggle("p2")} className="btn btn1 small-btn modal-btn">
                                     <i className='bx bx-link-external'></i>
-                                </a>
+                                </button>
                             </div>
                         </div>
 
@@ -72,8 +79,8 @@ const Projects = () => {
                             <img className="p-img" src={p3} alt="Imagen del proyecto 3" />
 
                             <div className="p-desc">
-                                <div className="h4">Aluraflix</div>
-                                <p>Aluraflix es otro de los retos propuestos en el programa ONE y consiste en una plataforma donde puedes ver y agregar videos de diferentes categorias.</p>
+                                <div className="h4">Alurageek Ecommerce</div>
+                                <p>Alurageek es uno de los retos planteados en el programa ONE y consiste en una plataforma donde puedes comprar diferentes tipos de equipos como un usuario y tambien administrar los productos como un administrador.</p>
                             </div>
 
                             <div className="p-actions">
@@ -85,9 +92,9 @@ const Projects = () => {
                                     <i className='bx bx-link-external'></i>
                                 </a>
 
-                                <a href="" target="_blank" role="button" className="btn btn1 small-btn modal-btn">
+                                <button onClick={() => toggle("p3")} className="btn btn1 small-btn modal-btn">
                                     <i className='bx bx-link-external'></i>
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>
