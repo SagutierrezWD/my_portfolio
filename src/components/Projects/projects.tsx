@@ -7,6 +7,15 @@ import p3 from "../../assets/p3.jpg"
 import { useModalContext } from "../../context/modalContext"
 import type { ProjectsListed } from "../../types"
 
+const Icon = () => {
+    return (<>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12 9a3 3 0 1 0 0 6a3 3 0 1 0 0-6"></path>
+            <path fill="currentColor" d="M12 19c7.63 0 9.93-6.62 9.95-6.68c.07-.21.07-.43 0-.63c-.02-.07-2.32-6.68-9.95-6.68s-9.93 6.61-9.95 6.67c-.07.21-.07.43 0 .63c.02.07 2.32 6.68 9.95 6.68Zm0-12c5.35 0 7.42 3.85 7.93 5c-.5 1.16-2.58 5-7.93 5s-7.42-3.84-7.93-5c.5-1.16 2.58-5 7.93-5"></path>
+            </svg>
+        </>)
+}
+
 const Projects = () => {
     const mode = useThemeContext()
     const modal = useModalContext()
@@ -14,6 +23,7 @@ const Projects = () => {
     const toggle = (id:ProjectsListed) => {
         modal.toggleModal(id)
     }
+
 
     return (
         <>
@@ -39,7 +49,7 @@ const Projects = () => {
                                 </a>
 
                                 <button onClick={() => toggle("p1")} className="btn btn1 small-btn modal-btn">
-                                    <i className='bx bx-link-external'></i>
+                                    <Icon />
                                 </button>
 
                                 {/* <ul className="tech-list">
@@ -70,7 +80,7 @@ const Projects = () => {
                                 </a>
                                 
                                 <button  onClick={() => toggle("p2")} className="btn btn1 small-btn modal-btn">
-                                    <i className='bx bx-link-external'></i>
+                                    <Icon />
                                 </button>
                             </div>
                         </div>
@@ -93,7 +103,7 @@ const Projects = () => {
                                 </a>
 
                                 <button onClick={() => toggle("p3")} className="btn btn1 small-btn modal-btn">
-                                    <i className='bx bx-link-external'></i>
+                                    <Icon />
                                 </button>
                             </div>
                         </div>
