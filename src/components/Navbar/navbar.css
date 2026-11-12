@@ -15,7 +15,7 @@
 .toggle {
     cursor: pointer;
     position: relative;
-    transition: opacity 0.5s ease;
+    transition: 0.1s ease all;
 }
 
 .toggle, .menu {
@@ -43,6 +43,7 @@
 .menu > li > a {
     position: relative;
     text-decoration: none;
+    cursor: pointer;
     /* color: greenyellow; */
 }
 

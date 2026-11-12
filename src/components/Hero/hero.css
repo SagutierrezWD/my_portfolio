@@ -120,6 +120,7 @@
     padding: 10px 25px;
     font-size: clamp(20px, 5vw, 1.2rem);
     border-radius: 28px;
+    cursor: pointer;
     position: relative;
     /* background-color: transparent;
     color: contrast-color(black); */

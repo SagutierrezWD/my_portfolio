@@ -1,0 +1,150 @@
+.contactMe, .contactMe-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactMe {
+    background-color: var(--section-bg-light-color-2);
+}
+
+.contactMe-copy {
+    background-color: transparent;
+}
+
+.cmCard {
+    width: 90%;
+    min-height: 60vh;
+    background: linear-gradient(120deg, white, #d9f0ff); 
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    border-radius: 28px;
+    border-bottom-right-radius: 0px;
+    padding: 30px;
+}
+
+.formulary {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.formulary input, .formulary textarea {
+    border-radius: 28px;
+    border: none;
+    outline: 2px solid black;
+    padding: 10px 15px;
+    font-size: 18px;
+}
+
+.formulary textarea {
+    resize: none;
+}
+
+.desc {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/hs1.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-radius: 28px;
+    border-bottom-left-radius: 0;
+    padding: 60px;
+    color: white;
+    /* position: relative; */
+}
+
+.desc p {
+    position: relative;
+}
+
+.img {
+    position: absolute;
+    width: 65%;
+    left: 50%;
+    translate: -50%;
+    background-color: blue;
+    /* min-width: 200px; */
+    bottom: 120%;
+    background-image: url('../../assets/bu.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    aspect-ratio: 16/9;
+    border-radius: 28px;
+}
+
+.cmCard-bottom {
+    width: calc(90% + calc(30px * 2));
+    display: flex;
+    gap: 20px;
+    margin-top: -5px;
+    position: relative;
+}
+
+.cmCard-bottom h3 {
+    padding: 20px 30px;
+    margin-top: 15px;
+    border-radius: 28px;
+    background-color: white;
+    flex: 0 0 auto;
+    color: var(--main-color-2);
+}
+
+.cmCard-shape {
+    flex: 1;
+    height: calc(100% + 40px);
+    background-color: white;
+    border-bottom-left-radius: 28px;
+    border-bottom-right-radius: 28px;
+    padding: 40px;
+    padding-top: 70px;
+    position: relative;
+    align-self: flex-end;
+    background: linear-gradient(120deg, white, #d9f0ff); 
+}
+
+.cmCard-shape::before {
+    content: "";
+    width: 24px;
+    aspect-ratio: 1;
+    background-color: white;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    background: radial-gradient(circle 24px at bottom left, transparent 98%, white);
+}
+
+@media screen and (max-width: 1200px) {
+    .img {
+        width: 85%;
+        bottom: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .img {
+        display: none;
+    }
+
+    .cmCard {
+        flex-wrap: wrap;
+    }
+
+    .formulary {
+        width: 100%;
+    }
+
+    .desc {
+        padding: 20px;
+    }
+}

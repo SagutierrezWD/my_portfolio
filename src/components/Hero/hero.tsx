@@ -1,13 +1,14 @@
 import './hero.css'
 import image from "../../assets/me.jpg"
 import { useThemeContext } from '../../context/themeContext.tsx'
+import { useRef } from 'react'
 
 const Hero = () => {
     const mode = useThemeContext()
     
     return (
         <>
-            <section className="section hero">
+            <section id="home" className="section hero">
                 <div className="hero-head">
                     <div className="titles">
                         <h1 className="hero-title">Sergio Gutiérrez</h1>

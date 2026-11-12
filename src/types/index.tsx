@@ -20,6 +20,7 @@ interface MenuItemProps {
 interface ItemProps {
     icon: string;
     text: string;
+    to: string;
 }
 
 export type { SectionProps, AltBackgroundProps, MenuItemProps }

@@ -1,9 +1,29 @@
+import { useEffect, useState } from 'react';
+import { NavLink } from "react-router";
 import { useThemeContext } from '../../context/themeContext'
 import SectionShape from '../SectionFigures/sectionFigures'
 import './footer.css'
 
 function Footer() {
     const mode = useThemeContext()
+
+    const [time, setTime] = useState(new Date().toLocaleTimeString());
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+        setTime(new Date().toLocaleTimeString());
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, []);
+
+    function navigateTo(id:string) {
+        const element = document.getElementById(id);
+
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+    }
 
     return (
         <>
@@ -12,7 +32,7 @@ function Footer() {
             <footer className="section footer">
                 <div className="call-action">
                     <h3 className="ca-title">Hagamos realidad tu <span>idea</span></h3>
-                    <button className="btn btn1">Contactame</button>
+                    <button onClick={() => navigateTo("contactme")} className="btn btn1">Contactame</button>
                 </div>
 
                 <div className="social-links">
@@ -27,9 +47,9 @@ function Footer() {
                 <div className="info">
                     <span className='rights'>@Sagutierrez - Todos los derechos reservados - 2026</span>
 
-                    <span className='time'>10:53:06 AM</span>
+                    <span className='time'>{time}</span>
 
-                    <button className="btn btn1"><i className='bx bxs-arrow-from-bottom'></i></button>
+                    <button onClick={() => navigateTo("home")} className="btn btn1"><i className='bx bxs-arrow-from-bottom'></i></button>
                 </div>
             </footer>
         </>

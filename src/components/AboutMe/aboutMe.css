@@ -154,6 +154,16 @@
     animation-timeline: view(10% 5%);
 }
 
+.reveal2 {
+    animation: elementReveal both;
+    animation-timeline: view(80% 5%);
+}
+
+.reveal3 {
+    animation: elementReveal both;
+    animation-timeline: view(90% 5%);
+}
+
 @keyframes elementReveal {
     from {
         opacity: 0;

@@ -8,6 +8,14 @@ const Navbar: React.FC<MenuItemProps> = ({items}: MenuItemProps) => {
     const menu = useMenuStatusContext()
     const mode = useThemeContext()
 
+    function navigateTo(id:string) {
+        const element = document.getElementById(id);
+
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+    }
+
     return (
         <aside className="sidebar">
             <span className="toggle" onClick={() => menu.toggleMenu()}>
@@ -18,10 +26,10 @@ const Navbar: React.FC<MenuItemProps> = ({items}: MenuItemProps) => {
 
             <ul className={menu.open === true ? "menu" : "menu hidden-menu"} id='menu'>
             {
-                items.map(({icon, text}, i) => {
+                items.map(({icon, text, to}, i) => {
                     return <>
                     
-                    <li className="menu-item" key={i}><a href="" className="link5"  key={i}><i className={icon}  key={i}></i><span className='menu-info' key={i}>{text}</span></a></li>
+                    <li className="menu-item" key={i}><a onClick={() => navigateTo(to)} className="links"  key={i}><i className={icon}  key={i}></i><span className='menu-info' key={i}>{text}</span></a></li>
                     
                     </>
                 })
@@ -32,7 +40,7 @@ const Navbar: React.FC<MenuItemProps> = ({items}: MenuItemProps) => {
                 <i className='bx bx-moon'></i>
                 {/* <i className='bx bx-sun'></i> */}
 
-                <span className='menu-info'>Modo Oscuro</span>
+                <span className='menu-info'>{mode.theme == "light" ? "Modo Oscuro" : "Modo Claro"}</span>
                 {/* <span className='menu-info'>Modo Claro</span> */}
             </span>
         </aside>
