@@ -65,7 +65,7 @@
     position: absolute;
     left: 100%;
     top: 0;
-    background: radial-gradient(circle 24px at bottom right, transparent 98%, white);
+    background: var(--pseudo-color);
 }
 
 .project {

@@ -6,6 +6,7 @@ import p2 from "../../assets/p2.jpg"
 import p3 from "../../assets/p3.jpg"
 import { useModalContext } from "../../context/modalContext"
 import type { ProjectsListed } from "../../types"
+import { useEffect } from "react"
 
 const Icon = () => {
     return (<>
@@ -24,13 +25,23 @@ const Projects = () => {
         modal.toggleModal(id)
     }
 
+    let themeColor = mode.theme
+            
+    useEffect(() => {
+            themeColor = mode.theme
+            if(themeColor==="light"){
+                document.documentElement.style.setProperty("--pseudo-color", "radial-gradient(circle 24px at top left, transparent 98%, white)");   
+            }else{
+                document.documentElement.style.setProperty("--pseudo-color", "radial-gradient(circle 24px at top left, transparent 98%, #26355D)");
+            }
+    }, [mode.theme])
 
     return (
         <>
             <SectionShape svg1={{bg:mode.theme==="light" ? "var(--section-bg-light-color-2)" : "var(--section-bg-dark-color-2)", blur:false}} svg2={{bg:mode.theme==="light" ? "var(--section-bg-light-color-1)" : "var(--section-bg-dark-color-1)", blur:false}} />
             <section id="projects" className="section projects" style={{backgroundColor:mode.theme==="light" ? "var(--section-bg-light-color-1)" : "var(--section-bg-dark-color-1)", backdropFilter:"none", color:"white"}}>
                 <div className="projects-copy reveal3">
-                    <div className="card-project text">
+                    <div className="card-project text"  style={{background:themeColor==="light" ? "linear-gradient(120deg, white, #d9f0ff)" : "linear-gradient(120deg, #26355D, #362F4F)", color:themeColor==="light" ? "black" : "white"}}>
                         <div className="project">
                             <img className="p-img" src={p1} alt="Imagen del proyecto 1" />
 
@@ -109,9 +120,9 @@ const Projects = () => {
                         </div>
                     </div>
 
-                    <div className="project-shape">
+                    <div className="project-shape" style={{background:themeColor==="light" ? "linear-gradient(120deg, white, #d9f0ff)" : "linear-gradient(120deg, #26355D, #362F4F)"}}>
                         <div className="project-shaping"></div>
-                        <h3 className="text">Proyectos</h3>
+                        <h3 className="text"  style={{backgroundColor:themeColor==="light" ? "white" : "#26355D", color:themeColor==="light" ? "var(--main-color-2)" : "#92EEFF"}}>Proyectos</h3>
                     </div>
                 </div>
             </section>

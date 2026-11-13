@@ -51,7 +51,7 @@
     padding-top: 55px;
     position: relative;
     align-self: flex-end;
-    background: linear-gradient(270deg, white, #d9f0ff); 
+    background: var(--pseudo-color); 
 }
 
 .skill-shape::after {

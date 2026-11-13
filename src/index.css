@@ -62,4 +62,5 @@ body {
     --section-bg-light-color-2:rgba(111, 0, 255, 1);
     --section-bg-dark-color-1:rgba(47, 47, 228, 1);
     --section-bg-dark-color-2:rgba(71, 19, 150, 1);
+    --pseudo-color: radial-gradient(circle 24px at top left, transparent 98%, white);
 }

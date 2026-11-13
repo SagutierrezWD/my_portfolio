@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useThemeContext } from '../../context/themeContext.tsx'
 import  SectionShape  from '../SectionFigures/sectionFigures.tsx'
 import './aboutMe.css'
@@ -5,6 +6,17 @@ import './aboutMe.css'
 
 const AboutMe = () => {
     const mode = useThemeContext()
+
+    let themeColor = mode.theme
+    
+    useEffect(() => {
+            themeColor = mode.theme
+            if(themeColor==="light"){
+                document.documentElement.style.setProperty("--pseudo-color", "radial-gradient(circle 24px at top left, transparent 98%, white)");   
+            }else{
+                document.documentElement.style.setProperty("--pseudo-color", "radial-gradient(circle 24px at top left, transparent 98%, #26355D)");
+            }
+    }, [mode.theme])
 
     return (
         <>
@@ -14,8 +26,8 @@ const AboutMe = () => {
                     <div style={{width:"100%"}}>
                         <div className="card-shape">
                             <div className="shaping">
-                            <h3 className='shape-title'>Sobre mi</h3>
-                            <div className="shape" /></div>
+                            <h3 className='shape-title' style={{backgroundColor:themeColor==="light" ? "white" : "#26355D", color:themeColor==="light" ? "var(--main-color-2)" : "#92EEFF"}}>Sobre mi</h3>
+                            <div className="shape" style={{background:themeColor==="light" ? "linear-gradient(120deg, white, #d9f0ff)" : "linear-gradient(120deg, #26355D, #362F4F)"}}/></div>
                         </div>
                     </div>
 
@@ -26,7 +38,7 @@ const AboutMe = () => {
 
                         {/* <img src={image} alt="Foto de perfíl" className='profile' /> */}
 
-                        <div className="card">
+                        <div className="card" style={{background:themeColor==="light" ? "linear-gradient(120deg, white, #d9f0ff)" : "linear-gradient(120deg, #26355D, #362F4F)", color:themeColor==="light" ? "black" : "white"}}>
                             {/* <div className="aside">
                                 <h3 className='card-title'>Sobre mi</h3>
                             </div> */}
